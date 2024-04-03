@@ -13,12 +13,7 @@ class UniversityController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //$courses = Course::all();
-        $courses = Course::with('department')->get();
-        return view('course.index', compact('courses'));
-    }
+    
     
     public function search(Request $request)
     {

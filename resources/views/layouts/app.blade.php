@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contoso University</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
 </head>
 <body>
     <div id="app">
@@ -22,16 +22,27 @@
                             <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/">About</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('student') }}">Students</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('course.index')}}">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/instructors">Instructors</a>
+                            <a class="nav-link" href="{{route('instructor.index')}}">Instructors</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/depa">Departement</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="{{ route('authen.register') }}" class="btn">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('authen.login') }}" class="btn btn-outline">Login</a>
                         </li>
                     </ul>
                 </div>

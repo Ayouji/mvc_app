@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('office_assigns', function (Blueprint $table) {
             $table->unsignedBigInteger('officeAssign_id')->primary()->autoIncrement();
-            $table->string('location', 100);
             $table->unsignedBigInteger('instructor_id');
+            $table->string('location', 100);
             $table->foreign('instructor_id')->references('instructor_id')->on('istructors');
             $table->timestamps();
         });

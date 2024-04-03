@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class OfficeAssign extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'officeAssign_id';
 }

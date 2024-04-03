@@ -2,27 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
+use App\Models\Istructor;
 use Illuminate\Http\Request;
 
-class CourseController extends Controller
+class InstructorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //$courses = Course::all();
-        $courses = Course::with('department')->get();
-        return view('course.index', compact('courses'));
+        $instructors = Istructor::with('office')->get();
+        return view('instructor.index', compact('instructors'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    
     public function create()
     {
-        return view('course.create');
+        //
     }
 
     /**

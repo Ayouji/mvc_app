@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\UniversityController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +21,10 @@ Route::put('/student/update/{student_id}', [UniversityController::class, 'update
 Route::get('/student/delete/{student_id}', [UniversityController::class, 'destroy'])->name('student.delete');
 
 Route::get('course.index', [CourseController::class, 'index'])->name('course.index');
+Route::get('instructor.index', [InstructorController::class, 'index'])->name('instructor.index');
+Route::post('/login', [AuthController::class, 'login'])->name('login.login');
+Route::post('/register', [AuthController::class, 'store'])->name('register.store');
+Route::get('/log_index', [AuthController::class, 'index'])->name('authen.login');
+Route::get('/reg_ceate', [AuthController::class, 'create'])->name('authen.register');
+
+//require __DIR__.'/auth.php';
